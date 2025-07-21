@@ -12,4 +12,4 @@ export type BorderRadiusStyle = keyof typeof borderRadiusStyle;
 export type Height = keyof typeof height;
 export type GapStyle = keyof typeof gapStyle;
 
-export type Size = "xs" | "sm" | "md" | "lg" | "xlg";
+export type ButtonSize = "xs" | "sm" | "md"; // Cap at medium
