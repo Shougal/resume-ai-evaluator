@@ -2,8 +2,6 @@ import type { Size } from "../../theme/types";
 
 export type Variant = "primary";
 
-// primary sec ter
-
 export interface ButtonStyleProps {
   variant: Variant;
   size: Size;
