@@ -17,6 +17,7 @@ const baseStyle = (props: ButtonStyleProps) => {
     borderRadius: borderRadiusStyle[props.size],
     maxHeight: height.buttonHeight,
     background: Background.primary,
+    color: "white",
   };
 };
 

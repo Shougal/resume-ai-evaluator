@@ -64,6 +64,7 @@ export const getVariantStyle = (props: TextProps): React.CSSProperties => {
     ...baseStyle,
     ...gradientStyle,
     fontFamily: fontFamily.default,
+    color: "white",
     lineHeight: "normal",
     letterSpacing: "-0.03em",
     display: props.display ?? "block", // fallback if nothing is passed
