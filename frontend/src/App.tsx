@@ -2,6 +2,8 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import { Button } from "./components/Button";
+import { Text } from "./components/Text";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -28,6 +30,45 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      {/* Button xs - radius make bigger,  */}
+      <Button
+        onClick={() => {
+          alert("clicked");
+        }}
+        variant="primary"
+        size="md"
+        // disabled={true}
+      >
+        Hey checking! dhdhjjd dnidndk jddddddddddddd
+      </Button>
+      <Text typography="PageTitle">
+        {" "}
+        Text Title{" "}
+        <Text typography="PageTitle" linearGradient={true} display="inline">
+          Check
+        </Text>
+      </Text>
+      <Text typography="SectionTitle">
+        {" "}
+        Text Section{" "}
+        <Text typography="SectionTitle" linearGradient={true} display="inline">
+          Check
+        </Text>
+      </Text>
+      <Text typography="SubSection">
+        {" "}
+        Text sub section{" "}
+        <Text typography="SubSection" linearGradient={true} display="inline">
+          Check
+        </Text>
+      </Text>
+      <Text typography="description">
+        {" "}
+        Text description{" "}
+        <Text typography="description" linearGradient={true} display="inline">
+          Check
+        </Text>
+      </Text>
     </>
   );
 }
