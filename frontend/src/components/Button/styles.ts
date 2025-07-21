@@ -3,8 +3,8 @@ import {
   paddingStyle,
   fontSizeStyle,
   borderRadiusStyle,
-  height,
   Background,
+  height,
 } from "../../theme/layout";
 
 const baseStyle = (props: ButtonStyleProps) => {
@@ -15,7 +15,7 @@ const baseStyle = (props: ButtonStyleProps) => {
     padding: paddingStyle[props.size],
     fontSize: fontSizeStyle[props.size],
     borderRadius: borderRadiusStyle[props.size],
-    height: height.buttonHeight,
+    maxHeight: height.buttonHeight,
     background: Background.primary,
   };
 };

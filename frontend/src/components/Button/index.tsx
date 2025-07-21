@@ -1,7 +1,7 @@
-import type { ButtonProps, ButtonStyleProps } from "./types";
-import { getVariantStyle } from "./styles";
 import { motion } from "motion/react";
 
+import type { ButtonProps, ButtonStyleProps } from "./types";
+import { getVariantStyle } from "./styles";
 export const Button = ({
   size = "md",
   variant,
