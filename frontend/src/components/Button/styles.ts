@@ -4,7 +4,7 @@ import {
   fontSizeStyle,
   borderRadiusStyle,
   height,
-  buttonBackground,
+  Background,
 } from "../../theme/layout";
 
 const baseStyle = (props: ButtonStyleProps) => {
@@ -16,7 +16,7 @@ const baseStyle = (props: ButtonStyleProps) => {
     fontSize: fontSizeStyle[props.size],
     borderRadius: borderRadiusStyle[props.size],
     height: height.buttonHeight,
-    background: buttonBackground.primary,
+    background: Background.primary,
   };
 };
 

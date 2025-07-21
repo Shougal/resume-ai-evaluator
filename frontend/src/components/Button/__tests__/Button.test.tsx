@@ -6,7 +6,7 @@ describe("Button should be rendered", () => {
   it("renders the button component", () => {
     render(
       <Button
-        size="lg"
+        size="md"
         variant="primary"
         onClick={() => console.log("clicked")}
       >
