@@ -36,7 +36,7 @@ export const gapStyle = {
 };
 
 export const Background = {
-  page: "inear-gradient(to bottom, #0A0D17, #000000)",
+  page: "linear-gradient(to bottom, #0A0D17, #000000)",
   primary: "linear-gradient(0.6turn, #763AF5,40%,  #A604F2 )",
   text: "linear-gradient(to right, #FFFFFF 0%, #763AF5 48%, #A604F2 99%)",
 };
