@@ -5,28 +5,28 @@ import {
   Background,
 } from "../../theme/layout";
 import type { TextProps } from "./types";
-export const PageTitle = (props: TextProps) => {
+export const PageTitle = () => {
   return {
     fontWeight: fontWeight.xlg,
     fontSize: fontSizeStyle.title,
   };
 };
 
-export const SectionTitle = (props: TextProps) => {
+export const SectionTitle = () => {
   return {
     fontWeight: fontWeight.lg,
     fontSize: fontSizeStyle.xlg,
   };
 };
 
-export const SubSection = (props: TextProps) => {
+export const SubSection = () => {
   return {
     fontWeight: fontWeight.md,
     fontSize: fontSizeStyle.lg,
   };
 };
 
-export const description = (props: TextProps) => {
+export const description = () => {
   return {
     fontWeight: fontWeight.sm,
     fontSize: fontSizeStyle.md,
@@ -37,19 +37,19 @@ export const getVariantStyle = (props: TextProps): React.CSSProperties => {
   let baseStyle: React.CSSProperties;
   switch (props.typography) {
     case "PageTitle":
-      baseStyle = PageTitle(props);
+      baseStyle = PageTitle();
       break;
     case "SectionTitle":
-      baseStyle = SectionTitle(props);
+      baseStyle = SectionTitle();
       break;
     case "SubSection":
-      baseStyle = SubSection(props);
+      baseStyle = SubSection();
       break;
     case "description":
-      baseStyle = description(props);
+      baseStyle = description();
       break;
     default:
-      baseStyle = description(props); // fallback
+      baseStyle = description(); // fallback
       break;
   }
   const gradientStyle: React.CSSProperties = props.linearGradient

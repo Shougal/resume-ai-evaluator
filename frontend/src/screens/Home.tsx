@@ -3,6 +3,7 @@ import { Section } from "../components/Section";
 import { Button } from "../components/Button";
 import { paddingStyle, borderRadiusStyle } from "../theme/layout";
 
+// TODO: Handle submit api call, add utility class
 export const Home = () => {
   const handleSubmit = () => {
     console.log("submitted");
