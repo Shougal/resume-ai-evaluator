@@ -9,9 +9,17 @@ export const Section = ({
   title,
   children,
   displayDirection,
+  marginBottom = "sm",
+  marginTop = "xs",
+  background,
+  borderRadius,
 }: SectionProps) => {
   const style = sectionStyle({
     displayDirection,
+    marginBottom,
+    marginTop,
+    borderRadius,
+    background,
   });
 
   return (
