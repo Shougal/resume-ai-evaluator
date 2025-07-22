@@ -1,10 +1,10 @@
-import type { Size } from "../../theme/types";
+import type { ButtonSize } from "../../theme/types";
 
 export type Variant = "primary";
 
 export interface ButtonStyleProps {
   variant: Variant;
-  size: Size;
+  size: ButtonSize;
   disabled?: boolean;
 }
 //TODO Enhancement:on Mouse leave, up, and down
