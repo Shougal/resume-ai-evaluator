@@ -1,13 +1,11 @@
-import { Text } from "../components/Text";
-import { Section } from "../components/Section";
-import { Button } from "../components/Button";
-import { paddingStyle, borderRadiusStyle } from "../theme/layout";
+import { Text } from "../../components/Text";
+import { Section } from "../../components/Section";
+import { Button } from "../../components/Button";
+import { paddingStyle, borderRadiusStyle } from "../../theme/layout";
+import { handleFormSubmit } from "./utils";
 
 // TODO: Handle submit api call, add utility class
 export const Home = () => {
-  const handleSubmit = () => {
-    console.log("submitted");
-  };
   return (
     <>
       {/* Title section */}
@@ -30,7 +28,7 @@ export const Home = () => {
         <Section>
           <Text typography="SectionTitle"> Get started</Text>
 
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleFormSubmit}>
             <Text typography="description">
               Ready to impress recruiters? Drop your resume here and let
               ScoreBot AI show you how to shine.
@@ -48,7 +46,7 @@ export const Home = () => {
                   color: "#fff",
                 }}
               />
-              <Button onClick={handleSubmit} variant="primary" size="sm">
+              <Button onClick={handleFormSubmit} variant="primary" size="sm">
                 Analyze My Resume
               </Button>
             </Section>
