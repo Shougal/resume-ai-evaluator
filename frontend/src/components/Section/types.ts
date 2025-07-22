@@ -1,4 +1,8 @@
+import type { TextProps } from "../Text/types";
+
+export type Display = "row" | "column";
 export interface SectionProps {
   children: React.ReactNode;
-  title?: string;
+  title?: TextProps;
+  displayDirection?: Display;
 }
