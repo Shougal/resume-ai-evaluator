@@ -39,6 +39,7 @@ export const Background = {
   page: "linear-gradient(to bottom, #0a0d17, #1a0e2a, #000000)",
   primary: "linear-gradient(0.6turn, #763AF5,40%,  #A604F2 )",
   text: "linear-gradient(to right, #FFFFFF 0%, #763AF5 48%, #A604F2 99%)",
+  section: "linear-gradient(to bottom,#1a1a1f, #12131a",
 };
 
 export const fontFamily = {
@@ -52,4 +53,12 @@ export const fontWeight = {
   sm: 400,
   xs: 300,
   xxs: 200,
+};
+
+export const margin = {
+  xs: "2px",
+  sm: "30px",
+  md: "40px",
+  lg: "50px",
+  xlg: "100px",
 };
