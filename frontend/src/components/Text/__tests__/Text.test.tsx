@@ -81,7 +81,9 @@ describe("Text component", () => {
   );
 
   it("falls back to description style when unknown typography is passed", () => {
-    render(<Text typography={"unknown" as any}>Fallback Text</Text>);
+    render(
+      <Text typography={"unknown" as unknown as Typography}>Fallback Text</Text>
+    );
     const el = screen.getByText("Fallback Text");
     expect(el).toHaveStyle(`font-size: ${fontSizeStyle.md}`);
     expect(el).toHaveStyle(`font-weight: ${fontWeight.sm}`);
