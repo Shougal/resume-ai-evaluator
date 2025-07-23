@@ -11,7 +11,7 @@ app.use(cors()); // allows cross-origin requests
 app.use(express.json()); // parses incoming JSON request bodies
 
 app.get("/", (req, res) => {
-  res.send("Backend is working!");
+  res.send("Hello from Resume AI backend!");
 });
 
 app.listen(PORT, () => {
