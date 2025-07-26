@@ -1,8 +1,14 @@
-export const resumeChore = [
+export interface PromptType {
+  id: string;
+  title: string;
+  instruction: string;
+}
+
+export const resumeChore: PromptType[] = [
   {
     id: "contacts",
     title: "contact and links evaluation",
-    prompt:
+    instruction:
       "Review the contact and links section of this resume.\
         1) What’s included?\
         2) What’s missing (e.g., GitHub, LinkedIn, professional email, phone)?\
@@ -12,7 +18,7 @@ export const resumeChore = [
   {
     id: "skills",
     title: "skills evaluation",
-    prompt:
+    instruction:
       "Analyze the skills section of this Computer Science resume.\
         1) What coding languages and tools are listed?\
         2) What strong SEO keywords are present?\
@@ -23,7 +29,7 @@ export const resumeChore = [
   {
     id: "experiences",
     title: "experiences and projects evaluation",
-    prompt:
+    instruction:
       "Evaluate the Experience and Projects section for a computer science or related fields.\
         1) What action verbs and impact metrics are used?\
         2) Which technical SEO keywords/tools/frameworks are included?\
@@ -34,7 +40,7 @@ export const resumeChore = [
   {
     id: "certifications",
     title: "certifications and awards evaluation",
-    prompt:
+    instruction:
       "Evaluate the certifications and awards in this resume for a computer science or related field.\
         1) What’s included?\
         2) Are they relevant to Computer Science or software roles?\
@@ -44,7 +50,7 @@ export const resumeChore = [
   {
     id: "education",
     title: "education evaluation",
-    prompt:
+    instruction:
       "Check the education section of this resume.\
         1) Is it complete (degree, major, school, graduation date)?\
         2) Are any relevant courses or achievements listed?\
