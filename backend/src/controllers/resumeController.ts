@@ -38,8 +38,11 @@ export const evaluateResume = async (req: Request, res: Response) => {
     }
     // 2) take request and send to evaluate with prompt argument
     const evaluation = await resumeChoreEvaluator(text, prompts);
+
     return res.status(200).json({
       message: "Resume evaluated successfully",
+      mimetype: file.mimetype,
+      preview: text.slice(0, 300),
       evaluationResult: evaluation,
     });
   } catch (error: any) {
