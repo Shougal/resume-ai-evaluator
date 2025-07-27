@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import { resumeRouter } from "./routes/resumeRoutes.ts";
+import { resumeRouter } from "./routes/resumeRoutes";
 
 dotenv.config(); //loads env variables
 

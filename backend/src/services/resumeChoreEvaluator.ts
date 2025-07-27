@@ -1,5 +1,5 @@
-import { createGroqClient } from "./groqClient.ts";
-import type { PromptType } from "../prompts/resumeChore.ts";
+import { createGroqClient } from "./groqClient";
+import type { PromptType } from "../prompts/resumeChore";
 interface EvaluationResult {
   id: string;
   result: string;
