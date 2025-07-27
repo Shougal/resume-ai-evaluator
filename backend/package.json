@@ -4,7 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "patch-package",
+    "test": "jest",
     "dev": "nodemon --watch src --exec ts-node-esm src/index.ts",
     "lint": "eslint src --ext .ts"
   },
@@ -15,19 +16,32 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.2.0",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "groq-sdk": "^0.29.0",
+    "mammoth": "^1.9.1",
+    "multer": "^2.0.2",
+    "pdf-parse": "^1.1.1"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
+    "@types/multer": "^2.0.0",
     "@types/node": "^24.0.15",
+    "@types/pdf-parse": "^1.1.5",
+    "@types/supertest": "^6.0.3",
     "@typescript-eslint/eslint-plugin": "^8.37.0",
     "@typescript-eslint/parser": "^8.37.0",
     "eslint": "^9.31.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.3",
+    "jest": "^30.0.5",
     "nodemon": "^3.1.10",
+    "patch-package": "^8.0.0",
+    "postinstall-postinstall": "^2.1.0",
     "prettier": "^3.6.2",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.37.0"
