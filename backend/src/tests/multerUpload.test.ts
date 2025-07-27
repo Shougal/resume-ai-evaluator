@@ -1,7 +1,7 @@
 // /// <reference types="jest" />
 
 // import request from "supertest";
-// import app from "../app";
+// import app from "../app.ts";
 // import path from "path";
 // import fs from "fs";
 

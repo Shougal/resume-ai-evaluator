@@ -1,5 +1,5 @@
-// import { resumeChoreEvaluator } from "../services/resumeChoreEvaluator";
-// import type { PromptType } from "../prompts/resumeChore";
+// import { resumeChoreEvaluator } from "../services/resumeChoreEvaluator.ts";
+// import type { PromptType } from "../prompts/resumeChore.ts";
 
 describe("Skipped temporarily to avoid hitting rate limits", () => {
   it("skips all tests in this suite", () => {

@@ -1,9 +1,4 @@
-import express from "express";
-import cors from "cors";
-import dotenv from "dotenv";
-import multer from "multer";
-import { resumeRouter } from "./routes/resumeRoutes";
-import app from "./app";
+import app from "./app.ts";
 
 const PORT = process.env.PORT || 3001;
 

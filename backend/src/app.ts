@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import multer from "multer";
-import { resumeRouter } from "./routes/resumeRoutes";
+import { resumeRouter } from "./routes/resumeRoutes.ts";
 
 const upload = multer({ dest: "uploads/" });
 dotenv.config(); //loads env variables
