@@ -1,0 +1,6 @@
+{
+  "name": "resume-ai-backend",
+  "scripts": {
+    "postdeploy": "cd backend && npm install && npm run build"
+  }
+}
