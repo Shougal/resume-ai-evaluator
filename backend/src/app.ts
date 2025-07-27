@@ -7,7 +7,12 @@ dotenv.config(); //loads env variables
 
 const app = express();
 
-app.use(cors()); // allows cross-origin requests
+app.use(
+  cors({
+    origin: "https://resume-ai-evaluator-psi.vercel.app",
+    credentials: true,
+  })
+); // allows cross-origin requests
 app.use(express.json()); // parses incoming JSON request bodies
 
 app.get("/", (req, res) => {
