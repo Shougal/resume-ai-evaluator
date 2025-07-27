@@ -5,8 +5,14 @@ import { paddingStyle, borderRadiusStyle } from "../../theme/layout";
 import { useState } from "react";
 import resumeAI from "../../assets/resumeAI.jpeg";
 import type { EvaluationResponse } from "./type";
+import { cleanEvaluationText } from "./utils";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "../../components/Accordion";
 
-// TODO: Handle submit api call, add utility class
 export const Home = () => {
   const [file, setFile] = useState<File | null>(null);
   const [result, setResult] = useState<EvaluationResponse | null>(null);
@@ -134,28 +140,30 @@ export const Home = () => {
 
       {/* Displaying the result if available */}
       {result && !error && (
-        <Section marginTop="md">
+        <div style={{ width: "100%" }}>
           <Text typography="SectionTitle">AI Evaluation Output</Text>
-          {/* Display preview of the resume */}
-          <Text typography="description">
-            <strong>Resume Preview:</strong> {result.preview}
-          </Text>
 
-          {/* Display evaluation results */}
           <Text typography="description">
             <strong>Evaluation Results:</strong>
           </Text>
-          {result.evaluationResult.map(
-            (evaluation: { id: string; result: string }) => (
-              <Section key={evaluation.id} marginTop="sm">
-                <Text typography="description">
-                  <strong>Evaluation {evaluation.id}:</strong>{" "}
-                  {evaluation.result}
-                </Text>
-              </Section>
-            )
-          )}
-        </Section>
+
+          <div style={{ width: "100%" }}>
+            <Accordion type="multiple">
+              {result.evaluationResult.map((evaluation) => (
+                <AccordionItem key={evaluation.id} value={evaluation.id}>
+                  <AccordionTrigger>
+                    Evaluation {evaluation.id}
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <Text typography="description">
+                      {cleanEvaluationText(evaluation.result)}
+                    </Text>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
       )}
     </>
   );
