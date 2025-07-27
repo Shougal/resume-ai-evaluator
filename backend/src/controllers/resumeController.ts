@@ -1,8 +1,8 @@
 import type { Request, Response } from "express";
-import { resumeChore } from "../prompts/resumeChore.ts";
+import { resumeChore } from "../prompts/resumeChore";
 import pdfParse from "pdf-parse";
 import mammoth from "mammoth";
-import { resumeChoreEvaluator } from "../services/resumeChoreEvaluator.ts";
+import { resumeChoreEvaluator } from "../services/resumeChoreEvaluator";
 
 export const evaluateResume = async (req: Request, res: Response) => {
   //1) get evaluate resume prompts as a list from prompts directory

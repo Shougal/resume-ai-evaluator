@@ -1,5 +1,5 @@
-import { upload } from "../middleware/upload.ts";
-import { evaluateResume } from "../controllers/resumeController.ts";
+import { upload } from "../middleware/upload";
+import { evaluateResume } from "../controllers/resumeController";
 import multer from "multer";
 import { Router } from "express";
 
