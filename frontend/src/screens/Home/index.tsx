@@ -2,13 +2,14 @@ import { Text } from "../../components/Text";
 import { Section } from "../../components/Section";
 import { Button } from "../../components/Button";
 import { paddingStyle, borderRadiusStyle } from "../../theme/layout";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import resumeAI from "../../assets/resumeAI.jpeg";
+import type { EvaluationResponse } from "./type";
 
 // TODO: Handle submit api call, add utility class
 export const Home = () => {
   const [file, setFile] = useState<File | null>(null);
-  const [result, setResult] = useState<any>(null);
+  const [result, setResult] = useState<EvaluationResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -41,8 +42,13 @@ export const Home = () => {
         }
         const data = await response.json();
         setResult(data);
-      } catch (error: any) {
+      } catch (error: unknown) {
         console.error("Error during resume evaluation:", error);
+        if (error instanceof Error) {
+          setError(error.message);
+        } else {
+          setError("An unexpected error occurred.");
+        }
       } finally {
         setLoading(false);
       }
