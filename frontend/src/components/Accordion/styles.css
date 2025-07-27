@@ -3,6 +3,7 @@
 }
 
 .accordion-item {
+  width: 100%;
   border-bottom: 1px solid #ccc;
 }
 
@@ -22,6 +23,8 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box;
   transition: background 0.3s ease;
 }
 
@@ -40,7 +43,7 @@
 }
 
 .accordion-content {
-  background-color: #f3e8ff;
+  background: linear-gradient(to bottom, #1a1a1f, #12131a);
   overflow: hidden;
   transition: height 0.3s ease;
   border-radius: 8px;
