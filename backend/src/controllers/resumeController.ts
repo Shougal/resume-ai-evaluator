@@ -6,7 +6,7 @@ import { resumeChoreEvaluator } from "../services/resumeChoreEvaluator.ts";
 
 export const evaluateResume = async (req: Request, res: Response) => {
   //1) get evaluate resume prompts as a list from prompts directory
-  let prompts = resumeChore;
+  const prompts = resumeChore;
 
   // req.file: holds the name of file specidief in html multip part form
   // to access file use .buffer since I stored in multer memory storage
